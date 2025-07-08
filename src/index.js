@@ -48,6 +48,7 @@ import { COUNTRY_ADDRESS_POSTALS } from "./postalRegEx";
   });
 
   identification.addEventListener("submit", (event) => {
+    const div = document.querySelector(".success");
     event.preventDefault();
 
     const inputs = [
@@ -60,13 +61,13 @@ import { COUNTRY_ADDRESS_POSTALS } from "./postalRegEx";
 
     inputs.forEach((element) => {
       if (element.validity.valid) {
-        const div = document.querySelector(".success");
         removeError(element);
         element.value = "";
         element.setCustomValidity("");
         div.classList.remove("disappear");
       } else {
         displayError(element);
+        div.classList.add("disappear");
       }
     });
   });
