@@ -1,3 +1,3 @@
 # Template
 
-Template for basic projects
+Practicing form validation with Javascript

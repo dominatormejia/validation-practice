@@ -66,6 +66,85 @@ h6 {
 #__next {
   isolation: isolate;
 }
-body {
-  background-color: lightblue;
+@font-face {
+  font-family: "open sans";
+  src:
+    url("./fonts/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
+    url("./fonts/opensans-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --error-color: #ff525d;
+  --form-color: #add8e6;
+  font-family: "open sans";
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  outline: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: left;
+  padding: 25px;
+  border-radius: 20px;
+  background-color: var(--form-color);
+}
+h1 {
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  padding-top: 5px;
+  border-radius: 10px;
+  height: 28px;
+  border: none;
+  border: 1px solid white;
+}
+input:focus,
+input:active {
+  outline: none;
+  border: solid black;
+}
+.error-message {
+  background-color: var(--error-color);
+  color: white;
+  padding: 2px;
+  padding-left: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.hidden {
+  visibility: hidden;
+}
+.disappear {
+  display: none;
+}
+p {
+  font-size: 0.7rem;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+button {
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: lightgray;
+  color: white;
+}
+span {
+  color: var(--error-color);
+  position: relative;
+  top: 3px;
+  left: 2px;
 }
