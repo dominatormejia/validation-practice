@@ -77,6 +77,7 @@ h6 {
 :root {
   --error-color: #ff525d;
   --form-color: #add8e6;
+  --valid-color: #2e8b57;
   font-family: "open sans";
 }
 .wrapper {
@@ -105,7 +106,17 @@ input {
   border-radius: 10px;
   height: 28px;
   border: none;
-  border: 1px solid white;
+  border: 2px solid white;
+}
+input:invalid:not(:placeholder-shown),
+input:focus:invalid:not(:placeholder-shown),
+input:active:invalid:not(:placeholder-shown) {
+  border-color: var(--error-color);
+}
+input:valid:not(:placeholder-shown),
+input:focus:valid:not(:placeholder-shown),
+input:active:valid:not(:placeholder-shown) {
+  border-color: var(--valid-color);
 }
 input:focus,
 input:active {
